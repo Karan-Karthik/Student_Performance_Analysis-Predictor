@@ -83,11 +83,6 @@ class ModelTrainer:
                 obj= best_model
             )
 
-            predict_y= best_model.predict(X_test)
-            rs_square= r2_score(y_test, predict_y)
-            return rs_square
-
-
 
         except Exception as e:
             raise CustomException(e, sys)
