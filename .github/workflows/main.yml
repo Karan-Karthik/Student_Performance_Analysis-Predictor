@@ -89,6 +89,12 @@ jobs:
        
       - name: Run Docker Image to serve users
         run: |
+          if [ "$(docker ps -a -q -f name=stud_perf_container)" ]; then
+            echo "Container 'stud_perf_container' exists. Removing it..."
+            docker rm -f stud_perf_container
+          fi
+
+        
           docker run -d -p 8080:8080 --ipc="host" --name=stud_perf_container \
           -e 'AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}' \
           -e 'AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}' \
