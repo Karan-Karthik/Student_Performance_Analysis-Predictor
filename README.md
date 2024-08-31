@@ -1,3 +1,3 @@
-## End to End  Machine Learning Project
+# Student Performance Predictor
 
-AWS Deployment with CI CD Pipelines
+An end-to-end machine learning application to predict student performance, deployed with a Flask web app and integrated with AWS for CI/CD.
