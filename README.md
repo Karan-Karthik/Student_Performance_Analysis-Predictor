@@ -1,4 +1,4 @@
-### Student Performance Predictor
+# Student Performance Predictor
 
 
 An end-to-end machine learning application designed to predict student performance. This project features a Flask web application deployed on AWS, using Docker for containerization and AWS services for continuous integration and deployment.
@@ -13,7 +13,7 @@ Troubleshooting
 
 The Student Performance Predictor is a web application built with Flask that provides insights and visualizations on student performance data. The application is containerized using Docker, and deployed on an AWS EC2 instance using Amazon ECR for storage and AWS CLI for management.
 
-# Prerequisites
+### Prerequisites
 
 Before setting up the application, make sure you have the following:
 
@@ -34,7 +34,7 @@ ECR_REPOSITORY_NAME	Name of your ECR repository, e.g., studentperformance_app.
 Setting Environment Variables in GitHub Actions
 Go to Settings > Security > Actions and add the necessary secret keys for GitHub Actions to access your AWS resources.
 
-# Setup Instructions
+### Setup Instructions
 
 
 1. Set Up Docker on Your EC2 Instance
@@ -79,7 +79,7 @@ docker run -d -p 5000:5000 --name studentperformance_app <aws-account-id>.dkr.ec
 ```
 Ensure that the EC2 instance's security group allows inbound HTTP traffic on port 5000.
 
-# Accessing the Web Application
+### Accessing the Web Application
 
 Once the application is running, you can access it via your web browser:
 
@@ -87,7 +87,7 @@ Home Page: http://<public-ip-of-ec2-instance>:5000
 Predictor Page: http://<public-ip-of-ec2-instance>:5000/predictdata
 Replace <public-ip-of-ec2-instance> with the public IP address of your EC2 instance.
 
-# Troubleshooting
+### Troubleshooting
 
 Port Accessibility: Ensure that port 5000 is open in your EC2 instance's security group settings.
 Permissions: Make sure your AWS credentials have the necessary permissions to access ECR and EC2.
