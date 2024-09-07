@@ -18,6 +18,7 @@ The Student Performance Predictor is a web application built with Flask that pro
 Before setting up the application, make sure you have the following:
 
 AWS Account: An active AWS account with access to ECR and EC2 services.
+
 AWS CLI: AWS Command Line Interface installed and configured with your credentials.
 Docker: Docker installed and running on your local machine.
 Git: Git installed for cloning the repository.
