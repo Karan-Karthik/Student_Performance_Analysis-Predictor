@@ -40,7 +40,7 @@ Go to Settings > Security > Actions and add the necessary secret keys for GitHub
 1. Set Up Docker on Your EC2 Instance
 Log into your EC2 instance and run the following commands to set up Docker:
 
-bash
+```bash
 Copy code
 sudo apt-get update -y
 sudo apt-get upgrade -y
@@ -48,7 +48,7 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 sudo usermod -aG docker $USER
 newgrp docker
-
+```
  
  2.Set Up a Self-Hosted Runner for GitHub Actions
 To set up a self-hosted runner:
@@ -60,7 +60,7 @@ Deployment to AWS
 1. Login to Amazon ECR
 Run the following command to log in to Amazon ECR:
 
-bash
+```bash
 Copy code
 aws ecr get-login-password --region <your-region> | docker login --username AWS --password-stdin <aws-account-id>.dkr.ecr.<region>.amazonaws.com
 2. Build, Tag, and Push Docker Image to ECR
@@ -69,12 +69,14 @@ Copy code
 docker build -t studentperformance_app .
 docker tag studentperformance_app:latest <aws-account-id>.dkr.ecr.<region>.amazonaws.com/studentperformance_app:latest
 docker push <aws-account-id>.dkr.ecr.<region>.amazonaws.com/studentperformance_app:latest
+```
 3. Run the Application on EC2
 After pulling the Docker image on your EC2 instance, run:
 
-bash
-Copy code
+``` bash
+#Copy code
 docker run -d -p 5000:5000 --name studentperformance_app <aws-account-id>.dkr.ecr.<region>.amazonaws.com/studentperformance_app:latest
+```
 Ensure that the EC2 instance's security group allows inbound HTTP traffic on port 5000.
 
 # Accessing the Web Application
@@ -85,7 +87,7 @@ Home Page: http://<public-ip-of-ec2-instance>:5000
 Predictor Page: http://<public-ip-of-ec2-instance>:5000/predictdata
 Replace <public-ip-of-ec2-instance> with the public IP address of your EC2 instance.
 
-Troubleshooting
+# Troubleshooting
 
 Port Accessibility: Ensure that port 5000 is open in your EC2 instance's security group settings.
 Permissions: Make sure your AWS credentials have the necessary permissions to access ECR and EC2.
