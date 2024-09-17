@@ -1,7 +1,15 @@
 # Student Performance Predictor
 
 
-An end-to-end machine learning application designed to predict student performance. This project features a Flask web application deployed on AWS, using Docker for containerization and AWS services for continuous integration and deployment.
+An end-to-end machine learning application designed to predict student performance. Interactively asks for input sex, ethnicity, parental level of education and writing scores to predict the maths score. 
+
+Key Features:
+
+- Interactive Prediction: Predict math scores by entering student-specific details such as sex, ethnicity, parental education, and writing scores.
+- Comprehensive EDA: Jupyter notebooks containing in-depth visualizations and analyses of the dataset, uncovering trends and correlations.
+- Machine Learning Model: Trained on real-world data to deliver accurate and data-driven predictions.
+
+
 
 ## Table of Contents
 
