@@ -47,7 +47,7 @@ AWS_SECRET_ACCESS_KEY	Your AWS secret access key.
 
 AWS_REGION	The AWS region where your resources are located.
 
-AWS_ECR_LOGIN_URI	Your ECR login URI, e.g., 203918856764.dkr.ecr.us-east-2.amazonaws.com/studentperformance_app.
+AWS_ECR_LOGIN_URI	Your ECR login URI, e.g., 203924345764.dkr.ecr.us-east-2.amazonaws.com/studentperformance_app.
 
 ECR_REPOSITORY_NAME	Name of your ECR repository, e.g., studentperformance_app.
 
